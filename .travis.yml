@@ -7,4 +7,4 @@ before_install:
   - docker build -t docker-react-tag -f Dockerfile.dev .
 
 script:
-  - docker run docker-react-tag npm run test -- --coverage
+  - docker run -e CI=true docker-react-tag npm run test -- --coverage
